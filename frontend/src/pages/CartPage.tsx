@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Minus, Plus, Trash2, ShoppingBag, ArrowLeft } from 'lucide-react';
-import { useCartStore } from '../../../src/store/cartStore';
-import { useAuthStore } from '../../../src/store/authStore';
-import api from '../../../src/utils/api';
+import { useCartStore } from '../store/cartStore';
+import { useAuthStore } from '../store/authStore';
+import api from '../utils/api';
 import toast from 'react-hot-toast';
 import ConfirmStatusModal from '../components/ConfirmStatusModal';
 

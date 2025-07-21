@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect } from 'react';
 import { io, Socket } from 'socket.io-client';
-import { useAuthStore } from '../../../src/store/authStore';
+import { useAuthStore } from '../store/authStore';
 import toast from 'react-hot-toast';
 
 interface SocketContextType {

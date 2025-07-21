@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import { Search, Filter } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 import ConfirmStatusModal from '../components/ConfirmStatusModal';
-import { useCartStore } from '../../../src/store/cartStore';
+import { useCartStore } from '../store/cartStore';
 import toast from 'react-hot-toast';
-import api from '../../../src/utils/api';
+import api from '../utils/api';
 
 interface Product {
   id: number;

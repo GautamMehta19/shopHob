@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Package, Calendar, DollarSign, Eye } from 'lucide-react';
-import { useAuthStore } from '../../../src/store/authStore';
-import api from '../../../src/utils/api';
+import { useAuthStore } from '../store/authStore';
+import api from '../utils/api';
 import toast from 'react-hot-toast';
 import ConfirmStatusModal from '../components/ConfirmStatusModal';
 
