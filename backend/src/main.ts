@@ -12,6 +12,7 @@ async function bootstrap() {
     credentials: true,
   });
 
+  
   app.useGlobalPipes(new ValidationPipe());
   app.useWebSocketAdapter(new IoAdapter(app));
 
