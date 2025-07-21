@@ -1,10 +1,10 @@
 import { Link, useLocation } from 'react-router-dom';
 import { ShoppingCart, User, LogOut, Shield, ChevronUp, ChevronDown } from 'lucide-react';
-import { useAuthStore } from '../store/authStore';
-import { useCartStore } from '../store/cartStore';
+import { useAuthStore } from '../../../src/store/authStore';
+import { useCartStore } from '../../../src/store/cartStore';
 import ConfirmStatusModal from './ConfirmStatusModal';
 import { useEffect, useRef, useState } from 'react';
-import api from '../utils/api';
+import api from '../../../src/utils/api';
 
 const Navbar = () => {
   const { user, logout } = useAuthStore();

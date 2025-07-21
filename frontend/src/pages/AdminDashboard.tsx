@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Edit2, Trash2, Package, DollarSign, Users, ShoppingBag } from 'lucide-react';
-import { useAuthStore } from '../store/authStore';
-import api from '../utils/api';
+import { useAuthStore } from '../../../src/store/authStore';
+import api from '../../../src/utils/api';
 import toast from 'react-hot-toast';
 
 interface Product {

@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect } from 'react';
 import { io, Socket } from 'socket.io-client';
-import { useAuthStore } from '../store/authStore';
+import { useAuthStore } from '../../../src/store/authStore';
 import toast from 'react-hot-toast';
 
 interface SocketContextType {
@@ -18,7 +18,7 @@ const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ children }) =
   useEffect(() => {
     if (user) {
       const newSocket = io('http://localhost:3001');
-      
+
       newSocket.on('connect', () => {
         console.log('Connected to socket server');
         newSocket.emit('join', { userId: user.id });
