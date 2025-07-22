@@ -121,8 +121,9 @@ const LoginPage = () => {
           <div className="mt-6 p-4 bg-gray-50 rounded-lg">
             <p className="text-sm text-gray-600 mb-2 font-medium">Demo Accounts:</p>
             <div className="text-xs text-gray-500 space-y-1">
-              <p><strong>Admin:</strong> admin@demo.com / password123</p>
-              <p><strong>Customer:</strong> customer@demo.com / password123</p>
+              <p className='font-medium text-sm'>Gautam Mehta</p>
+              <p><strong>Admin:</strong> gautam19@gmail.com / Admin@123</p>
+              {/* <p><strong>Customer:</strong> customer@demo.com / password123</p> */}
             </div>
           </div>
         </div>

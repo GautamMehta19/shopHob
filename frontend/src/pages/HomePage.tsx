@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ShoppingBag, Truck, Shield, HeartHandshake } from 'lucide-react';
+import Footer from './Footer';
 
 const HomePage = () => {
   return (
@@ -40,7 +41,7 @@ const HomePage = () => {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Why Choose ShopHub?
           </h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -103,6 +104,8 @@ const HomePage = () => {
           </Link>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
