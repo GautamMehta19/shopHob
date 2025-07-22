@@ -12,11 +12,11 @@ async function bootstrap() {
     credentials: true,
   });
 
-  
+
   app.useGlobalPipes(new ValidationPipe());
   app.useWebSocketAdapter(new IoAdapter(app));
 
-  await app.listen(3001);
-  console.log('🚀 Backend server running on http://localhost:3001');
+  await app.listen(process.env.PORT || 3001);
+  console.log(`🚀 Backend server running on ${process.env.PORT}`);
 }
 bootstrap();
