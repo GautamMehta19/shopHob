@@ -61,10 +61,8 @@ import { AppController } from './app.controller';
       type: 'postgres',
       url: process.env.DATABASE_URL,
       entities: [User, Product, Order, OrderItem],
-      synchronize: true, // ⚠️ false in production
-      ssl: {
-        rejectUnauthorized: false, // Supabase requires this
-      },
+      synchronize: process.env.NODE_ENV === 'production' ? false : true,
+      ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
     }),
 
     PassportModule,
