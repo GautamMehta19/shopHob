@@ -11,6 +11,8 @@ import OrdersPage from './pages/OrdersPage';
 import AdminDashboard from './pages/AdminDashboard';
 import SocketProvider from './components/SocketProvider';
 import ProfilePage from './pages/ProfilePage';
+import ProtectedRoute from './components/ProtectedRoute';
+import PageNotFound from './pages/PageNotFound';
 
 function App() {
   const { user, isLoading } = useAuthStore();
@@ -31,7 +33,7 @@ function App() {
           <main className="container mx-auto px-4 py-8">
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/profile" element={<ProfilePage />} />
+              <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/products" element={<ProductsPage />} />
@@ -40,6 +42,7 @@ function App() {
               {user?.role === 'admin' && (
                 <Route path="/admin" element={<AdminDashboard />} />
               )}
+              <Route path="*" element={<PageNotFound />} />
             </Routes>
           </main>
           <Toaster
